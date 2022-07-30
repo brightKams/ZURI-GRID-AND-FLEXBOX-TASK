@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;600&family=Poppins:wght@500&family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca:wght@400;600&family=Poppins:wght@500&family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/grid.css">
+    <title>GRID LAYOUT</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            font-family: Big Shoulders Display;
+            font-size: 15px;
+        }
+
+        :root {
+            /* bright Orange */
+            --color1: hsl(31, 77%, 52%);
+            /* Dark Cyan */
+            --color2: hsl(184, 100%, 22%);
+            /* Very Dark Cyan */
+            --color3: hsl(179, 100%, 13%);
+            /* Transparent white (paragraphs): */
+            --color4: hsla(0, 0%, 100%, 0.75);
+            /* Very light gray (background, headings, buttons): */
+            --color5: hsl(0, 0%,95%);
+
+        }
+
+
+        main {
+            width: 80%;
+            margin: 150px auto 100px auto;
+            display: grid;
+            /* grid-template-columns: auto auto auto; */
+            grid-template-areas: "a b c";
+
+        }
+
+        main > section {
+            padding: 35px;
+        }
+        main > section:nth-of-type(1){
+            background-color: var(--color1);
+            grid-area: a;
+        }
+
+        main > section:nth-of-type(2){
+            background-color: var(--color2);
+            grid-area: b;
+        }
+
+        main > section:nth-of-type(3){
+            background-color: var(--color3);
+            grid-area: c;
+        }
+        h1 {
+            margin-top: 15px;
+            font-size: 2rem;
+            color: var(--color5);
+        }
+        p {
+            height: 25vh;
+            margin-top: 20px;
+            font-size: 1.9em;
+            color: var(--color4);
+        }
+
+        button {
+            padding: 10px;
+            border-radius: 20px;
+            width: 7rem;
+            margin-top: 20px;
+        }
+
+        .btnOne {
+            color: var(--color1);
+            border-color: transparent;
+        }
+
+        .btnTwo {
+            color: var(--color2);
+            border-color: transparent;
+        }
+
+        .btnThree {
+            color: var(--color3);
+            border-color: transparent;
+        }
+
+        @media screen and (min-width:768px) and (max-width:900px) {
+
+            main {
+                width: 90%;
+                min-height: 45vh;
+                margin-top: 250px;
+            }
+            p {
+
+                height: 15vh;
+                font-size: 1.7rem;
+                text-align: left;
+            }
+
+            button {
+            padding: 10px;
+            border-radius: 20px;
+            width: 7rem;
+            margin-top: 150px;
+            
+            }
+        }
+
+        @media screen and (min-width:375px) and (max-width:400px) {
+
+            main {
+                width: 50%;
+                display: block;
+                margin-top: 50px auto;
+            }
+            section:nth-of-type(2), section:nth-of-type(3) {
+            margin: auto;
+            margin-top: 30px;
+            }
+            p {
+                height: 15vh;
+                font-size: smaller;
+                text-align: left;
+                
+                }
+
+            button {
+            padding: 10px;
+            border-radius: 20px;
+            width: 7rem;
+            margin-top: 10px;
+            
+            
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+        <div>
+
+            <img src="./images/icon-sedans.svg" alt="icons Sedans SVG"
+            >
+            <h1>SEDANS</h1>
+            <P>Choose a sedan for its affordaability and excellent fuel economy. Ideal for cruising in the city or on your next road trip.</P>
+
+            <button class="btnOne">Learn More</button>
+        </div>
+        </section>
+
+        <section>
+        <div>
+            <img src="./images/icon-suvs.svg" alt="icons SUVS SVG">
+
+            <h1>SUVS</h1>
+            <P>Take an SUV for its spacious interior, power, and versatility. Perfect fr your next family vocation and off-road adventures.</P>
+
+            <button class="btnTwo">Learn More</button>
+        </div>
+        </section>
+
+    <section>
+        <div>
+            <img src="./images/icon-luxury.svg" alt="icon Luxury SVG">
+
+            <h1>LUXURY</h1>
+            <P>Cruise in the best car brands without the bloated pricees. Enjoy the enhanced comfort of a luxury rental and arrive in style.</P>
+            <button class="btnThree">Learn More</button>
+        </div>
+    </section>
+    </main>
+    
+</body>
+</html>
